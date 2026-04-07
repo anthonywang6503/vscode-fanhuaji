@@ -1,5 +1,7 @@
 # CHANGELOG.md
 
+**注意事項**：自擴充功能 **1.0.4（含）以後**，請使用 **VS Code 1.110.0 以上**（`package.json` 的 `engines.vscode` 為 `^1.110.0`）。
+
 # 1.0.5
 
 - 開發工具鏈升級：`TypeScript` 6、`ESLint` 10（flat config）、`webpack` / `webpack-cli`、`axios` 1、`Prettier` 3、`@swc/core` 與相關 loader 等依賴更新至目前最新版。

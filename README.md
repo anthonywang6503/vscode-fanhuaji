@@ -1,5 +1,9 @@
 # VS Code - Fanhuaji
 
+## 注意事項
+
+- **擴充功能 1.0.4（含）以後**：需要 **VS Code（或相容編輯器）1.110.0 以上**，與 `package.json` 的 `engines.vscode`（`^1.110.0`）一致。
+
 ## 安裝
 
 ```sh
@@ -24,8 +28,7 @@ code --install-extension vscode-fanhuaji-x.x.x.vsix
 ## 使用方式
 
 - **指令面板**：`Ctrl+Shift+P`（macOS 為 `Cmd+Shift+P`）→ 輸入 **Fanhuaji** 或轉換模式名稱。
-- **編輯器右鍵選單**：在文字編輯器內容區右鍵 → 可見 **Traditional**、**Taiwan**；其餘模式在 **繁化姬** 子選單內。  
-  本擴充功能需要 **VS Code（或相容編輯器）≥ 1.110.0**（見 `package.json` 的 `engines.vscode`）。
+- **編輯器右鍵選單**：在文字編輯器內容區右鍵 → 可見 **Traditional**、**Taiwan**；其餘模式在 **繁化姬** 子選單內。（子選單等行為需符合上方「注意事項」中的 VS Code 版本。）
 
 ## 簡介
 
