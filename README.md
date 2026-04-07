@@ -10,6 +10,23 @@ code --install-extension vscode-fanhuaji-x.x.x.vsix
 
 快捷鍵 `F1` -> `Extension: Install from VSIX...`
 
+## 建置 VSIX
+
+本專案使用 [pnpm](https://pnpm.io/) 管理相依套件；若你使用 npm，可將下列指令中的 `pnpm` 改為對應的 `npm run`。
+
+1. **安裝相依**：在專案根目錄執行 `pnpm install`。
+2. **打包擴充功能**：執行 `pnpm run package`。  
+   此指令會呼叫 `vsce package --no-dependencies`，並透過 `vscode:prepublish` 觸發 `npm run build` 完成 webpack 建置。
+3. **取得檔案**：完成後在專案根目錄會產生 `vscode-fanhuaji-<版本號>.vsix`（版本號與 `package.json` 的 `version` 一致，例如 `1.0.4`）。
+
+若僅想先編譯而不打包，可執行 `pnpm run build`，產出位於 `dist/`。
+
+## 使用方式
+
+- **指令面板**：`Ctrl+Shift+P`（macOS 為 `Cmd+Shift+P`）→ 輸入 **Fanhuaji** 或轉換模式名稱。
+- **編輯器右鍵選單**：在文字編輯器內容區右鍵 → 可見 **Traditional**、**Taiwan**；其餘模式在 **繁化姬** 子選單內。  
+  本擴充功能需要 **VS Code（或相容編輯器）≥ 1.110.0**（見 `package.json` 的 `engines.vscode`）。
+
 ## 簡介
 
 繁化姬是一個繁簡轉換與本地化的工具，除了轉換模式外， 尚擁有轉換模組用於應付特定情況下的轉換。 並且在轉換完成後，提供與轉換前的差異比較，以讓使用者知曉哪些地方被轉換了。
