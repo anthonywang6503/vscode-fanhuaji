@@ -26,16 +26,18 @@ function getSettings(activeEditor?: vscode.TextEditor): Settings {
 	}
 
 	if (settings?.convertParams?.userPreReplace != undefined) {
-		if (settings.convertParams.userPreReplace === "object") {
-			settings.convertParams.userPreReplace = Object.entries(settings.convertParams.userPreReplace)
+		const pre = settings.convertParams.userPreReplace
+		if (typeof pre === "object" && pre !== null && !Array.isArray(pre)) {
+			settings.convertParams.userPreReplace = Object.entries(pre)
 				.map(([key, value]) => `${key}=${value}`)
 				.join("\n")
 		}
 	}
 
 	if (settings?.convertParams?.userPostReplace != undefined) {
-		if (settings.convertParams.userPostReplace === "object") {
-			settings.convertParams.userPostReplace = Object.entries(settings.convertParams.userPostReplace)
+		const post = settings.convertParams.userPostReplace
+		if (typeof post === "object" && post !== null && !Array.isArray(post)) {
+			settings.convertParams.userPostReplace = Object.entries(post)
 				.map(([key, value]) => `${key}=${value}`)
 				.join("\n")
 		}
