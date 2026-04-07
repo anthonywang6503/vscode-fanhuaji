@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+# 1.0.5
+
+- 開發工具鏈升級：`TypeScript` 6、`ESLint` 10（flat config）、`webpack` / `webpack-cli`、`axios` 1、`Prettier` 3、`@swc/core` 與相關 loader 等依賴更新至目前最新版。
+- 封裝工具：`vsce` 改為官方套件 `@vscode/vsce`（`package` 指令仍使用 `vsce` CLI）。
+- 建置設定：`tsconfig` 調整為符合新版 `moduleResolution`；新增 `eslint.config.mjs`，移除 `.eslintrc.yml`、`.eslintignore`。
+- **行為**：若無法自工作區／使用者設定讀取 Fanhuaji 設定，`getSettings` 會改為明確拋出錯誤（取代先前對 `undefined` 的非空斷言）。
+
 # 1.0.4
 
 - 編輯器右鍵選單（Context Menu）：`Traditional`、`Taiwan` 顯示於根層，其餘轉換指令收合在「繁化姬」子選單。
