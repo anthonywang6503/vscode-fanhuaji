@@ -47,8 +47,10 @@ function getSettings(activeEditor?: vscode.TextEditor): Settings {
 		settings.convertParams.userProtectReplace = settings.convertParams.userProtectReplace.join("\n")
 	}
 
-	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-	return settings!
+	if (settings == null) {
+		throw new Error("無法讀取 Fanhuaji 設定")
+	}
+	return settings
 }
 
 const MAX_TEXT_LENGTH_IN_BYTES = 5000000
