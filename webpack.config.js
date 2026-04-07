@@ -1,5 +1,3 @@
-const { register } = require("@swc-node/register/register")
-const { readDefaultTsConfig } = require("@swc-node/register/read-default-tsconfig")
-const path = require("path")
-register(readDefaultTsConfig(path.resolve("tsconfig.json")))
+// 使用 ts-node 載入設定，避免 @swc-node 與專案鎖定的 @swc/core 版本不相容（decoratorVersion 等欄位）
+require("ts-node/register/transpile-only")
 module.exports = require("./webpack.config.ts").default
