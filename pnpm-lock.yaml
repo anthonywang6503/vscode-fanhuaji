@@ -21,8 +21,8 @@ importers:
         specifier: 0.5.6
         version: 0.5.6
       '@types/vscode':
-        specifier: 1.52.0
-        version: 1.52.0
+        specifier: 1.110.0
+        version: 1.110.0
       '@types/webpack-env':
         specifier: 1.18.0
         version: 1.18.0
@@ -363,8 +363,8 @@ packages:
   '@types/source-map-support@0.5.6':
     resolution: {integrity: sha512-b2nJ9YyXmkhGaa2b8VLM0kJ04xxwNyijcq12/kDoomCt43qbHBeK2SLNJ9iJmETaAj+bKUT05PQUu3Q66GvLhQ==}
 
-  '@types/vscode@1.52.0':
-    resolution: {integrity: sha512-Kt3bvWzAvvF/WH9YEcrCICDp0Z7aHhJGhLJ1BxeyNP6yRjonWqWnAIh35/pXAjswAnWOABrYlF7SwXR9+1nnLA==}
+  '@types/vscode@1.110.0':
+    resolution: {integrity: sha512-AGuxUEpU4F4mfuQjxPPaQVyuOMhs+VT/xRok1jiHVBubHK7lBRvCuOMZG0LKUwxncrPorJ5qq/uil3IdZBd5lA==}
 
   '@types/webpack-env@1.18.0':
     resolution: {integrity: sha512-56/MAlX5WMsPVbOg7tAxnYvNYMMWr/QJiIp6BxVSW3JJXUVzzOn64qW8TzQyMSqSUFM2+PVI4aUHcHOzIz/1tg==}
@@ -2793,7 +2793,7 @@ snapshots:
     dependencies:
       source-map: 0.6.1
 
-  '@types/vscode@1.52.0': {}
+  '@types/vscode@1.110.0': {}
 
   '@types/webpack-env@1.18.0': {}
 
